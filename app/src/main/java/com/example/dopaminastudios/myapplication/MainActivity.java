@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void permission() {
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-            Toast.makeText(MainActivity.this,"Ya tienes este permiso", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,R.string.permissiongranted, Toast.LENGTH_LONG).show();
         }else{
             requestStoragePermission();
         }
@@ -142,15 +142,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.READ_EXTERNAL_STORAGE)){
 
             new AlertDialog.Builder(this)
-                    .setTitle("Se nececita permiso")
-                    .setMessage("El permiso es necesario para poder leer la base de datos, eso creo")
-                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    .setTitle(R.string.needspermision)
+                    .setMessage(R.string.permisionmotive)
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
                         }
                     })
-                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
@@ -167,9 +167,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode == STORAGE_PERMISSION_CODE){
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(this,"Permiso Dado",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,R.string.permissiongranted,Toast.LENGTH_LONG).show();
             }else {
-                Toast.makeText(this,"Permiso Negado",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,R.string.needspermision,Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         if(databaseHelper.chkCampaign(textView.getText().toString().trim())){
             Intent campaignIntent = new Intent(activity, CampaignsActivity.class);
-            campaignIntent.putExtra("CAMPAIGN", textView.getText().toString().trim());
+            campaignIntent.putExtra(getString(R.string.campaign) , textView.getText().toString().trim());
             emptyInputTextView();
             startActivity(campaignIntent);
         }else {

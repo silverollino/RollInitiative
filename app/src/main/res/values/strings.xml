@@ -8,4 +8,21 @@
     <string name="title_activity_new_encounter">NewEncounter</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="player">Jugador</string>
+    <string name="refresh">Refrescar</string>
+    <string name="enemy">ENEMIGO</string>
+    <string name="all">All</string>
+    <string name="campaign">Campaña</string>
+    <string name="play_now">Estas jugando</string>
+    <string name="permissiongranted">Ya tienes este permiso</string>
+    <string name="needspermision">Se nececita permiso</string>
+    <string name="permisionmotive">Se requiera accesar a la memoria externa para poder guardar eventualmente la base de datos en ella, o eso espero :D</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="new_player">Nuevo PC creado</string>
+    <string name="DB_Failed">No se guardo en la BD</string>
+    <string name="nueva_aventura">Empieza una nueva aventura</string>
+    <string name="Aventura_existente">Esa aventura ya existe</string>
+    <string name="name">Nombre</string>
+    <string name="add">Añadir</string>
 </resources>

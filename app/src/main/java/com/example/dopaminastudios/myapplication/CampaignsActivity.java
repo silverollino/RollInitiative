@@ -30,8 +30,8 @@ public class CampaignsActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_campaigns);
 
         textView = (TextView)findViewById(R.id.textView2);
-        String nameFromIntent = getIntent().getStringExtra("CAMPAIGN");
-        textView.setText("Estas jugando "+ nameFromIntent);
+        String nameFromIntent = getIntent().getStringExtra(getString(R.string.campaign));
+        textView.setText(R.string.play_now + nameFromIntent);
 
         encItems = (ListView)findViewById(R.id.encItems);
         encountersadapter = new encountersAdapter(this,GetArrayListItems() );

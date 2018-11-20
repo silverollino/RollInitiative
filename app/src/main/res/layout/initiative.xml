@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="Jugador"
+                    android:text="@string/player"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/colorAccent" />
 
@@ -41,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#009968"
-                    android:text="Refrescar" />
+                    android:text="@string/refresh" />
             </LinearLayout>
         </ScrollView>
     </android.support.v7.widget.CardView>

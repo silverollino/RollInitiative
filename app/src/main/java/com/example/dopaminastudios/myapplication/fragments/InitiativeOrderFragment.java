@@ -66,6 +66,6 @@ public class InitiativeOrderFragment extends Fragment{
 
     @Override
     public String toString() {
-        return "All";
+        return getString(R.string.all);
     }
 }

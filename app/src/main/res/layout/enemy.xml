@@ -28,7 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="ENEMIGO"
+                    android:text="@string/enemy"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/colorAccent" />
 
@@ -42,7 +42,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#009968"
-                    android:clickable="?android:attr/windowOverscan"
                     android:text="Actualizar" />
             </LinearLayout>
         </ScrollView>

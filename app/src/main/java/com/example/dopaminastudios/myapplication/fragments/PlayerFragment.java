@@ -57,6 +57,6 @@ public class PlayerFragment extends Fragment {
 
     @Override
     public String toString() {
-        return "Player";
+        return getString(R.string.player);
     }
 }

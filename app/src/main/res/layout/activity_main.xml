@@ -117,7 +117,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:clickable="true"
-        android:text="Empieza una nueva aventura"
+        android:text="@string/nueva_aventura"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"

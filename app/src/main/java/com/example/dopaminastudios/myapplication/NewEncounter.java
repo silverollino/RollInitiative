@@ -73,9 +73,9 @@ public class NewEncounter extends AppCompatActivity implements TabLayout.OnTabSe
                 if(new DatabaseAdapter(NewEncounter.this).savePlayer(player)){
                     nameEditText.setText("");
                     spinner.setSelection(0);
-                    Toast.makeText(NewEncounter.this, "Nuevo PC creado", Toast.LENGTH_LONG).show();
+                    Toast.makeText(NewEncounter.this, R.string.new_player, Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(NewEncounter.this, "No guardado", Toast.LENGTH_LONG).show();
+                    Toast.makeText(NewEncounter.this, R.string.DB_Failed, Toast.LENGTH_LONG).show();
                 }
             }
         });

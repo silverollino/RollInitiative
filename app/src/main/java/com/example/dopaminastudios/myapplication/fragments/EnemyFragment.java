@@ -56,6 +56,6 @@ public class EnemyFragment extends Fragment {
 
     @Override
     public String toString() {
-        return "Enemigo";
+        return getString(R.string.enemy);
     }
 }
